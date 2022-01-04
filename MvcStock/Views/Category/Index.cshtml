@@ -1,8 +1,24 @@
-﻿
+﻿@using MvcStock.Models.Entity
+@model List<TBLCATEGORIES>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Category List Page </h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Category ID</th>
+        <th>Category Name</th>
+    </tr>
+    <tbody>
+        @foreach (var ctgry in Model)
+        {
+            <tr>
+                <th>@ctgry.CategoryId</th>
+                <td>@ctgry.CategoryName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 
