@@ -1,0 +1,32 @@
+﻿@using MvcStock.Models.Entity
+@model List<TBLPRODUCTS>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Brand</th>
+        <th>Stock</th>
+    </tr>
+    <tbody>
+        @foreach (var prdct in Model)
+        {
+        <tr>
+            <th>@prdct.ProductId</th>
+            <td>@prdct.ProductName</td>
+            <td>@prdct.ProductCategory</td>
+            <td>@prdct.Price</td>
+            <td>@prdct.Brand</td>
+            <td>@prdct.Stock</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
