@@ -13,6 +13,8 @@
         <th>Price</th>
         <th>Brand</th>
         <th>Stock</th>
+        <th>Delete</th>
+        <th>Update</th>
     </tr>
     <tbody>
         @foreach (var prdct in Model)
@@ -24,9 +26,12 @@
             <td>@prdct.Price</td>
             <td>@prdct.Brand</td>
             <td>@prdct.Stock</td>
+            <td><a href="/Product/Delete/@prdct.ProductId" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Product/Update/@prdct.ProductId" class="btn btn-success">Update</a></td>
         </tr>
         }
     </tbody>
 </table>
+<a href="/Product/NewProduct/" class="btn btn-primary"> Add New Product</a>
 
 

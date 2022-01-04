@@ -9,16 +9,20 @@
     <tr>
         <th>Category ID</th>
         <th>Category Name</th>
+        <th>Delete</th>
+        <th>Update</th>
     </tr>
     <tbody>
         @foreach (var ctgry in Model)
         {
-            <tr>
-                <th>@ctgry.CategoryId</th>
-                <td>@ctgry.CategoryName</td>
-            </tr>
+        <tr>
+            <th>@ctgry.CategoryId</th>
+            <td>@ctgry.CategoryName</td>
+            <td><a href="/Category/Delete/@ctgry.CategoryId" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Category/Update/@ctgry.CategoryId" class="btn btn-success">Update</a></td>
+        </tr>
         }
     </tbody>
 </table>
-
+<a href="/Category/NewCategory/" class="btn btn-primary"> Add New Category</a>
 

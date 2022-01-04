@@ -16,5 +16,17 @@ namespace MvcStock.Controllers
             var value = db.TBLCATEGORIES.ToList();
             return View(value);
         }
+        [HttpGet]
+        public ActionResult NewCategory()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewCategory(TBLCATEGORIES p1)
+        {
+            db.TBLCATEGORIES.Add(p1);
+            db.SaveChanges();
+            return View();
+        }
     }
 }
