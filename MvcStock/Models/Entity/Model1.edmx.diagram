@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7bda6b45bfd648b3acca1e4e481b6d86" Name="Diagram1">
+        <EntityTypeShape EntityType="MvcDbStockModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDbStockModel.TBLCATEGORIES" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDbStockModel.TBLCUSTOMERS" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDbStockModel.TBLPRODUCTS" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDbStockModel.TBLSALES" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="MvcDbStockModel.FK_TBLPRODUCT_TBLCATEGORIES" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcDbStockModel.FK_TBLSALES_TBLCUSTOMER" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcDbStockModel.FK_TBLSALES_TBLPRODUCT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
