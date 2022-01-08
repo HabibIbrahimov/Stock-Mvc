@@ -35,5 +35,17 @@ namespace MvcStock.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult BringCategory(int id)
+        {
+            var ctgr = db.TBLCATEGORIES.Find(id);
+            return View("BringCategory", ctgr);
+        }
+        public ActionResult Update(TBLCATEGORIES p1)
+        {
+            var ctgr = db.TBLCATEGORIES.Find(p1.CategoryId);
+            ctgr.CategoryName = p1.CategoryName;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
