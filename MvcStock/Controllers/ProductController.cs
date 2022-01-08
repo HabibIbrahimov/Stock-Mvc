@@ -16,5 +16,17 @@ namespace MvcStock.Controllers
             var value = db.TBLPRODUCTS.ToList();
             return View(value);
         }
+        [HttpGet]
+        public ActionResult AddProduct()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddProduct(TBLPRODUCTS p1)
+        {
+            db.TBLPRODUCTS.Add(p1);
+            db.SaveChanges();
+            return View();
+        }
     }
 }

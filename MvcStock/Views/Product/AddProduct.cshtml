@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form method="post" class="form-group">
+    <div>
+        <label>Product Name</label>
+        <input type="text" class="form-control" name="ProductName" />
+    </div>
+    <div>
+        <label>Select Category</label>
+        <input type="text" class="form-control" name="ProductCategory" />
+    </div>
+    <div>
+        <label>Price</label>
+        <input type="text" class="form-control" name="Price" />
+    </div>
+    <div>
+        <label>Brand</label>
+        <input type="text" class="form-control" name="Brand" />
+    </div>
+    <div>
+        <label>Stock Qty</label>
+        <input type="text" class="form-control" name="Stock" />
+    </div>
+    <div>
+        <button style="margin-top:15px" class="btn btn-info">Add Product</button>
+    </div>
+
+</form>
+
