@@ -19,6 +19,13 @@ namespace MvcStock.Controllers
         [HttpGet]
         public ActionResult AddProduct()
         {
+            List<SelectListItem> value = (from i in db.TBLCATEGORIES.ToList()
+                                          select new SelectListItem
+                                          {
+                                              Text = i.CategoryName,
+                                              Value = i.CategoryId.ToString()
+                                          }).ToList();
+            ViewBag.val = value;
             return View();
         }
         [HttpPost]
