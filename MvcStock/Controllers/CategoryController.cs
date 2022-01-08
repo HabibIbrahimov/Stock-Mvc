@@ -28,5 +28,12 @@ namespace MvcStock.Controllers
             db.SaveChanges();
             return View();
         }
+        public ActionResult Delete(int id)
+        {
+            var category = db.TBLCATEGORIES.Find(id);
+            db.TBLCATEGORIES.Remove(category);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

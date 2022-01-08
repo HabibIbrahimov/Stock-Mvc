@@ -31,9 +31,11 @@ namespace MvcStock.Controllers
         [HttpPost]
         public ActionResult AddProduct(TBLPRODUCTS p1)
         {
+            var ctg = db.TBLCATEGORIES.Where(m => m.CategoryId == p1.TBLCATEGORIES.CategoryId).FirstOrDefault();
+            p1.TBLCATEGORIES = ctg;
             db.TBLPRODUCTS.Add(p1);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }
