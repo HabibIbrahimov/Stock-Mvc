@@ -14,13 +14,14 @@
     <tbody>
         @foreach (var cstmr in Model)
         {
-        <tr>
-            <th>@cstmr.CustomerId</th>
-            <td>@cstmr.CustomerName</td>
-            <td>@cstmr.CustomerSurname</td>
-        </tr>
+            <tr>
+                <th>@cstmr.CustomerId</th>
+                <td>@cstmr.CustomerName</td>
+                <td>@cstmr.CustomerSurname</td>
+            </tr>
         }
     </tbody>
 </table>
+<a href="/Customer/NewCustomer/" class="btn btn-primary"> Add New Customer</a>
 
 
