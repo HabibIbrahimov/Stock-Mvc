@@ -36,5 +36,20 @@ namespace MvcStock.Controllers
             return RedirectToAction("Index");
 
         }
+        public ActionResult BringCustomer(int id)
+        {
+            var cstr = db.TBLCUSTOMERS.Find(id);
+            return View("BringCustomer",cstr);
+        }
+        public ActionResult Update(TBLCUSTOMERS p1)
+        {
+            var customer = db.TBLCUSTOMERS.Find(p1.CustomerId);
+            customer.CustomerName = p1.CustomerName;
+            customer.CustomerSurname = p1.CustomerSurname;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+
+        }
     }
 }

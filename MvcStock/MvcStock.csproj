@@ -228,6 +228,7 @@
     <Content Include="Views\Customer\NewCustomer.cshtml" />
     <Content Include="Views\Product\AddProduct.cshtml" />
     <Content Include="Views\Category\BringCategory.cshtml" />
+    <Content Include="Views\Customer\BringCustomer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
