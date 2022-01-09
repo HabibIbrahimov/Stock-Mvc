@@ -24,6 +24,10 @@ namespace MvcStock.Controllers
         [HttpPost]
         public ActionResult NewCategory(TBLCATEGORIES p1)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("NewCategory");
+            }
             db.TBLCATEGORIES.Add(p1);
             db.SaveChanges();
             return View();
