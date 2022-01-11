@@ -11,7 +11,8 @@ namespace MvcStock.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLCUSTOMERS
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,8 @@ namespace MvcStock.Models.Entity
         }
     
         public int CustomerId { get; set; }
+        [Required(ErrorMessage = "You cannot leave this field blank!!!")]
+        [StringLength(50,ErrorMessage = "Enter name up to 50 characters")]
         public string CustomerName { get; set; }
         public string CustomerSurname { get; set; }
     

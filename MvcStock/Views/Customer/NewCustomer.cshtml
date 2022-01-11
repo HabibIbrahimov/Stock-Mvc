@@ -1,4 +1,4 @@
-﻿
+﻿@model MvcStock.Models.Entity.TBLCUSTOMERS
 @{
     ViewBag.Title = "NewCustomer";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -7,7 +7,8 @@
 <form method="post" class="form-group">
     <div>
         <label>Customer Name</label>
-        <input type="text" class="form-control" name="CustomerName" />
+        @Html.TextBoxFor(m => m.CustomerName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CustomerName, "", new { @style = "color:red" })
     </div>
     <div>
         <label>Customer Surname</label>
