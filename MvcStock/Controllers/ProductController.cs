@@ -44,5 +44,10 @@ namespace MvcStock.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult BringProduct(int id)
+        {
+            var product = db.TBLPRODUCTS.Find(id);
+            return View("BringProduct", product);
+        }
     }
 }
