@@ -12,6 +12,7 @@
         <th>Customer Surname</th>
         <th>Delete</th>
         <th>Update</th>
+        <th>Alert</th>
     </tr>
     <tbody>
         @foreach (var cstmr in Model)
@@ -22,6 +23,7 @@
             <td>@cstmr.CustomerSurname</td>
             <td><a href="/Customer/Delete/@cstmr.CustomerId" class="btn btn-danger">Delete</a></td>
             <td><a href="/Customer/BringCustomer/@cstmr.CustomerId" class="btn btn-success">Update</a></td>
+            <td>@Html.ActionLink("Delete Button","Delete",new { id=cstmr.CustomerId},new { @class="btn btn-warning",onclick= "return confirm('Do you want to delete?')" })</td>
         </tr>
         }
     </tbody>
