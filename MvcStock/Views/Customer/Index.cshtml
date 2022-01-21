@@ -5,6 +5,15 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+@using (Html.BeginForm("Index", "Customer", FormMethod.Get))
+ {
+<p>
+    <b> Customer Name To Search:</b> @Html.TextBox("p")
+    <input type="submit"  value="Search" />
+</p>
+ }
+
+
 <table class="table table-bordered">
     <tr>
         <th>Customer ID</th>
