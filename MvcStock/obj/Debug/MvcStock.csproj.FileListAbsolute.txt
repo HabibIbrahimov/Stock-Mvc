@@ -81,3 +81,7 @@ B:\Asp.Net\MvcStock\MvcStock\obj\Debug\MvcStock.csproj.CoreCompileInputs.cache
 B:\Asp.Net\MvcStock\MvcStock\obj\Debug\MvcStock.csproj.CopyComplete
 B:\Asp.Net\MvcStock\MvcStock\obj\Debug\MvcStock.dll
 B:\Asp.Net\MvcStock\MvcStock\obj\Debug\MvcStock.pdb
+B:\Asp.Net\MvcStock\MvcStock\bin\PagedList.dll
+B:\Asp.Net\MvcStock\MvcStock\bin\PagedList.xml
+B:\Asp.Net\MvcStock\MvcStock\bin\PagedList.Mvc.dll
+B:\Asp.Net\MvcStock\MvcStock\bin\PagedList.Mvc.xml
