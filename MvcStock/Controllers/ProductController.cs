@@ -47,7 +47,28 @@ namespace MvcStock.Controllers
         public ActionResult BringProduct(int id)
         {
             var product = db.TBLPRODUCTS.Find(id);
+
+            List<SelectListItem> value = (from i in db.TBLCATEGORIES.ToList()
+                                          select new SelectListItem
+                                          {
+                                              Text = i.CategoryName,
+                                              Value = i.CategoryId.ToString()
+                                          }).ToList();
+            ViewBag.val = value;
             return View("BringProduct", product);
+        }
+        public ActionResult Update(TBLPRODUCTS p)
+        {
+            var product = db.TBLPRODUCTS.Find(p.ProductId);
+            product.ProductName = p.ProductName;
+            product.Price = p.Price;
+            product.Brand = p.Brand;
+            product.Stock = p.Stock;
+            //product.ProductCategory = p.ProductCategory;
+            var ctg = db.TBLCATEGORIES.Where(m => m.CategoryId == p.TBLCATEGORIES.CategoryId).FirstOrDefault();
+            product.ProductCategory = ctg.CategoryId;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

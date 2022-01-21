@@ -14,7 +14,8 @@
     @Html.TextBoxFor(m => m.ProductName, new { @class = "form-control" })
     <br />
     @Html.LabelFor(m => m.ProductCategory)
-    @Html.TextBoxFor(m => m.ProductCategory, new { @class = "form-control" })
+    @Html.DropDownListFor(m=>m.TBLCATEGORIES.CategoryId,(List<SelectListItem>)ViewBag.val, new { @class = "form-control" })
+    @*@Html.TextBoxFor(m => m.ProductCategory, new { @class = "form-control" })*@
     <br />
     @Html.LabelFor(m => m.Price)
     @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
@@ -26,7 +27,7 @@
     @Html.TextBoxFor(m => m.Stock, new { @class = "form-control" })
 </div>
     <div>
-        <button class="btn btn-warning">Update Customer</button>
+        <button class="btn btn-warning">Update Product</button>
     </div>
 }
 
